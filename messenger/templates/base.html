@@ -9,6 +9,9 @@
     {% endblock %}
     </head>
     <body>
+        <nav>
+            <p>{{ request.user.username }}</p>
+        </nav>
         {% block content %}
         {% endblock %}
         

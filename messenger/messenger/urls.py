@@ -23,7 +23,7 @@ from user.views import RegistrationView, AuthorizationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeView.as_view()),
-    path('reg/', RegistrationView.as_view()),
-    path('auth/', AuthorizationView.as_view()),
+    path('', HomeView.as_view(), name='home'),
+    path('reg/', RegistrationView.as_view(), name= 'reg'),
+    path('auth/', AuthorizationView.as_view(), name='auth'),
 ]
