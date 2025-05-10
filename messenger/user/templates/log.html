@@ -6,16 +6,15 @@
 
 {% block content %}
     <h1>Вхід</h1>
-    <form method= "post">
+    <form method="post" action="{% url 'auth' %}">
         {% csrf_token %}
-        <input type="text" placeholder="Введіть ім'я" name="name" required>
+        <input type="text" name="username" placeholder="Логин" required>
         <br>
-        <input type="password" placeholder="Введіть пароль" name="password" required>
+        <input type="password" name="password" placeholder="Пароль" required>
         <br>
-        <input type="password" placeholder="Введіть код з почти" name="mail-password" required>
-        <br>
-        <button>Надіслати</button>
-{% endblock %}  
+        <button type="submit">Войти</button>
+    </form>
+{% endblock %}
 
 {% block script %}
 {% endblock %}
